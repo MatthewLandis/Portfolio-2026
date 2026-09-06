@@ -617,8 +617,8 @@ body {
 #contact h2 {
   font-size: clamp(3rem, 5.5vw, 5rem);
   color: var(--cream);
-    font-weight: lighter;
-line-height: 0.8;
+  font-weight: lighter;
+  line-height: 0.8;
 }
 
 #contact em {
@@ -717,4 +717,249 @@ line-height: 0.8;
 
 #footer nav i {
   font-size: 1.75rem;
+}
+
+@media (max-width: 900px) {
+  #header {
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+    height: auto;
+    min-height: 5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .availability {
+    display: none;
+  }
+
+  .site-nav {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.25rem;
+  }
+
+  .ornament,
+  #projects header,
+  #contact,
+  #contact p {
+    width: 100%;
+  }
+
+  #home,
+  #about,
+  #projects,
+  #contact {
+    height: auto;
+    min-height: calc(100vh - 10rem);
+    padding: 3rem var(--padding);
+  }
+
+  #home h1 {
+    font-size: clamp(3rem, 12vw, 6rem);
+  }
+
+  #home .description {
+    max-width: 42rem;
+  }
+
+  .buttons {
+    width: 100%;
+    max-width: 42rem;
+  }
+
+  #about {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  #about figure {
+    width: min(100%, 24rem);
+  }
+
+  #about article {
+    width: min(100%, 42rem);
+    justify-self: center;
+  }
+
+  #projects {
+    gap: 2rem;
+  }
+
+  #projects header {
+    align-items: start;
+    gap: 1.5rem;
+  }
+
+  #projects article {
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 52rem;
+    gap: 2rem;
+  }
+
+  #project-visual {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+  }
+
+  #projects aside {
+    width: 100%;
+    max-width: none;
+    padding: 0;
+  }
+
+  #contact {
+    max-width: 42rem;
+  }
+}
+
+@media (max-width: 600px) {
+  #header {
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+  }
+
+  .logo {
+    gap: 0.65rem;
+  }
+
+  .logo-text small {
+    font-size: 0.7rem;
+  }
+
+  .site-nav {
+    gap: 0.25rem 0.9rem;
+  }
+
+  .site-nav button {
+    font-size: 0.8rem;
+  }
+
+  #home,
+  #about,
+  #projects,
+  #contact {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .ornament b {
+    font-size: 1.5rem;
+  }
+
+  .titles {
+    font-size: 0.8rem;
+  }
+
+  .titles b {
+    padding: 0 0.5rem;
+  }
+
+  #home .description {
+    font-size: 1.05rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .buttons button {
+    padding: 1rem;
+  }
+
+  #about aside {
+    grid-template-columns: 1fr;
+  }
+
+  #about aside ul {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #projects header {
+    flex-direction: column;
+  }
+
+  #projects header h2 {
+    font-size: clamp(2.4rem, 12vw, 4rem);
+  }
+
+  .project-meta {
+    font-size: 0.85rem;
+  }
+
+  #projects aside h3 {
+    font-size: clamp(2.5rem, 14vw, 4rem);
+  }
+
+  #project-tags {
+    flex-wrap: wrap;
+  }
+
+  .project-controls {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  #contact h2 {
+    font-size: clamp(2.7rem, 13vw, 4.5rem);
+  }
+
+  #contact p {
+    font-size: 1.05rem;
+  }
+
+  #contact .contact-details a {
+    overflow-wrap: anywhere;
+  }
+
+  #footer {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    height: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+  }
+
+  #footer b,
+  #footer nav {
+    grid-column: 1;
+    justify-self: center;
+  }
+}
+
+@media (max-height: 700px) and (min-width: 601px) {
+  #home,
+  #about,
+  #projects,
+  #contact {
+    height: auto;
+    min-height: max(calc(100vh - 10rem), 42rem);
+    justify-content: flex-start;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  #home {
+    gap: 1.25rem;
+  }
+
+  #home h1 {
+    font-size: clamp(3rem, 7vw, 6rem);
+  }
+
+  #home .description {
+    max-width: 48rem;
+  }
+
+  #projects article {
+    gap: 2.5rem;
+  }
+
+  #project-visual {
+    height: min(42vh, 24rem);
+  }
 }
