@@ -11,7 +11,7 @@
 <body>
     <!-- Header -->
     <header id="header">
-        <button type="button" data-target="home">
+        <button type="button" data-target="home" onclick="showSection('home', this)">
             <span class="logo-box"><b>ML</b></span>
             <span>
                 <p>Matthew Landis</p>
@@ -19,15 +19,15 @@
             </span>
         </button>
         <nav>
-            <button type="button" data-target="home">Home</button>
+            <button type="button" data-target="home" onclick="showSection('home', this)">Home</button>
             <span>|</span>
-            <button type="button" data-target="about">About</button>
+            <button type="button" data-target="about" onclick="showSection('about', this)">About</button>
             <span>|</span>
-            <button type="button" data-target="projects">Projects</button>
+            <button type="button" data-target="projects" onclick="showSection('projects', this)">Projects</button>
             <span>|</span>
-            <button type="button" data-target="contact">Contact</button>
+            <button type="button" data-target="contact" onclick="showSection('contact', this)">Contact</button>
         </nav>
-        <button type="button" data-target="contact">
+        <button type="button" data-target="contact" onclick="showSection('contact', this)">
             <span>
                 <p>Open for work</p>
                 <small>Contact Me</small>
@@ -49,13 +49,13 @@
                 Learn more about them by visiting the links below!
             </p>
             <nav>
-                <button type="button" data-target="projects">
+                <button type="button" data-target="projects" onclick="showSection('projects', this)">
                     <span class="button-label">View Projects</span>
                 </button>
-                <button type="button" data-target="about">
+                <button type="button" data-target="about" onclick="showSection('about', this)">
                     <span class="button-label">About Me</span>
                 </button>
-                <button type="button" data-target="contact">
+                <button type="button" data-target="contact" onclick="showSection('contact', this)">
                     <span class="button-label">Contact Me</span>
                 </button>
             </nav>
@@ -82,7 +82,9 @@
                         <li><span>05</span>GitHub</li>
                         <li><span>03</span>JavaScript</li>
                     </ul>
-                <button class="home-button site-button" type="button" data-target="home"><span class="button-label">← Return home</span></button>
+                <button class="home-button site-button" type="button" data-target="home" onclick="showSection('home', this)">
+                    <span class="button-label">← Return home</span>
+                </button>
                 </aside>
             </article>
         </section>
@@ -94,9 +96,15 @@
                     <h2>A few things <em>I’ve built.</em></h2>
                 </div>
                 <nav>
-                    <button class="site-button" type="button" data-project-index="0"><span class="button-label">01</span></button>
-                    <button class="site-button" type="button" data-project-index="1"><span class="button-label">02</span></button>
-                    <button class="site-button" type="button" data-project-index="2"><span class="button-label">03</span></button>
+                    <button class="site-button" type="button" role="tab" data-project-index="0" onclick="renderProject(0)">
+                        <span class="button-label">01</span>
+                    </button>
+                    <button class="site-button" type="button" role="tab" data-project-index="1" onclick="renderProject(1)">
+                        <span class="button-label">02</span>
+                    </button>
+                    <button class="site-button" type="button" role="tab" data-project-index="2" onclick="renderProject(2)">
+                        <span class="button-label">03</span>
+                    </button>
                 </nav>
             </header>
             <article>
@@ -109,15 +117,21 @@
                     <ul id="project-tags"></ul>
                     <div class="project-controls">
                         <div class="project-links">
-                            <a id="project-link" target="_blank">Visit the Website ↗</a>
-                            <a id="project-link" target="_blank">Visit the Github page ↗</a>
+                            <a id="project-linkSite" target="_blank">Visit the Website ↗</a>
+                            <a id="project-linkGit" target="_blank">Visit the Github page ↗</a>
                         </div>
                         <div class="arrow-buttons">
-                            <button class="site-button" type="button" id="previous-project"><span class="button-label">←</span></button>
-                            <button class="site-button" type="button" id="next-project"><span class="button-label">→</span></button>
+                            <button class="site-button" type="button" id="previous-project" onclick="renderProject(selectedProjectIndex - 1)">
+                                <span class="button-label">←</span>
+                            </button>
+                            <button class="site-button" type="button" id="next-project" onclick="renderProject(selectedProjectIndex + 1)">
+                                <span class="button-label">→</span>
+                            </button>
                         </div>
                     </div>
-                    <button class="home-button site-button" type="button" data-target="home"><span class="button-label">← Return home</span></button>
+                    <button class="home-button site-button" type="button" data-target="home" onclick="showSection('home', this)">
+                        <span class="button-label">← Return home</span>
+                    </button>
                 </aside>
             </article>
         </section>
@@ -134,26 +148,28 @@
                 <span>Email</span>
                 <a href="mailto:Matthewlandis51@outlook.com">Matthewlandis51@outlook.com</a>
             </div>
-            <button class="home-button site-button" type="button" data-target="home"><span class="button-label">← Return home</span></button>
+            <button class="home-button site-button" type="button" data-target="home" onclick="showSection('home', this)">
+                <span class="button-label">← Return home</span>
+            </button>
         </section>
     </main>
     <!-- Footer Section -->
     <footer id="footer">
       <p>2026 Matthew Landis</p>
       <nav>
-                <a class="site-button" href="https://www.linkedin.com/in/matthew-landis-885a02168/"
+        <a class="site-button" href="https://www.linkedin.com/in/matthew-landis-885a02168/"
            target="_blank"
            title="LinkedIn">
-                    <span class="button-label"><i class="bx bxl-linkedin"></i></span>
+            <span class="button-label"><i class="bx bxl-linkedin"></i></span>
         </a>
-                <a class="site-button" href="https://github.com/MatthewLandis"
+        <a class="site-button" href="https://github.com/MatthewLandis"
            target="_blank"
            title="GitHub">
-                    <span class="button-label"><i class="bx bxl-github"></i></span>
+            <span class="button-label"><i class="bx bxl-github"></i></span>
         </a>
-                <a class="site-button" href="mailto:Matthewlandis51@outlook.com"
+        <a class="site-button" href="mailto:Matthewlandis51@outlook.com"
            title="Email Matthew Landis">
-                    <span class="button-label"><i class="bx bx-envelope"></i></span>
+            <span class="button-label"><i class="bx bx-envelope"></i></span>
         </a>
       </nav>
     </footer>
