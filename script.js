@@ -1,6 +1,6 @@
 const sections = [...document.querySelectorAll('[data-section]')];
-const sectionButtons = [...document.querySelectorAll('[data-section-target]')];
-const primaryNavButtons = [...document.querySelectorAll('.site-nav [data-section-target]')];
+const targetElements = [...document.querySelectorAll('[data-target]')];
+const primaryNavButtons = [...document.querySelectorAll('#header nav [data-target]')];
 
 function showSection(sectionName, trigger) {
   const nextSection = sections.find((section) => section.dataset.section === sectionName);
@@ -15,7 +15,7 @@ function showSection(sectionName, trigger) {
   });
 
   primaryNavButtons.forEach((button) => {
-    if (button.dataset.sectionTarget === sectionName) {
+    if (button.dataset.target === sectionName) {
       button.setAttribute('aria-current', 'page');
     } else {
       button.removeAttribute('aria-current');
@@ -33,10 +33,12 @@ function showSection(sectionName, trigger) {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-sectionButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    showSection(button.dataset.sectionTarget, button);
-  });
+document.addEventListener('click', (event) => {
+  const target = event.target.closest('[data-target]');
+
+  if (target) {
+    showSection(target.dataset.target, target);
+  }
 });
 
 const projects = [

@@ -11,20 +11,29 @@
 <body>
     <!-- Header -->
     <header id="header">
-        <button class="logo">
-            <span class="logo-box"><i>ML</i></span>
-            <span class="logo-text">
-                <strong>Matthew Landis</strong>
+        <button type="button" data-target="home">
+            <span class="logo-box"><b>ML</b></span>
+            <span>
+                <p>Matthew Landis</p>
                 <small>Web Developer</small>
             </span>
         </button>
-        <nav class="site-nav">
-            <button type="button" data-section-target="home">Home</button>
-            <button type="button" data-section-target="about">About</button>
-            <button type="button" data-section-target="projects">Projects</button>
-            <button type="button" data-section-target="contact">Contact</button>
+        <nav>
+            <button type="button" data-target="home">Home</button>
+            <span>|</span>
+            <button type="button" data-target="about">About</button>
+            <span>|</span>
+            <button type="button" data-target="projects">Projects</button>
+            <span>|</span>
+            <button type="button" data-target="contact">Contact</button>
         </nav>
-        <span class="availability"><i></i> Searching careers</span>
+        <button type="button" data-target="contact">
+            <span>
+                <p>Open for work</p>
+                <small>Contact Me</small>
+            </span>
+            <i></i>
+        </button>    
     </header>
     <main>
         <!-- Home Section -->
@@ -32,17 +41,23 @@
             <div class="ornament">
                 <span></span><b>✦</b><span></span>
             </div>
-            <p class="titles">Web Developer<b>•</b>Portfolio</p>
-            <h1><span>Matthew Landis</span> Portfolio</h1>
-            <p class="description">
+            <header>Web Developer</header>
+            <h1>Matthew Landis<br><em>Portfolio</em></h1>
+            <p>
                 I'm an entry level web developer. with my goal being to develop a career in the field. 
                 In the meantime, I'm refining my skills by creating fun short projects. 
-                <br><br>Learn more about them by visiting the links below!
+                Learn more about them by visiting the links below!
             </p>
-            <nav class="buttons">
-                <button type="button" data-section-target="projects">View Projects</button>
-                <button type="button" data-section-target="about">About Me</button>
-                <button type="button" data-section-target="contact">Contact Me</button>
+            <nav>
+                <button type="button" data-target="projects">
+                    <span class="button-label">View Projects</span>
+                </button>
+                <button type="button" data-target="about">
+                    <span class="button-label">About Me</span>
+                </button>
+                <button type="button" data-target="contact">
+                    <span class="button-label">Contact Me</span>
+                </button>
             </nav>
         </section>
         <!-- About Me Section -->
@@ -52,23 +67,23 @@
                 <figcaption>Matthew Landis 2026</figcaption>
             </figure>
             <article>
-            <header>About Me</header>
-            <h2>I enjoy doing <em>what I do.</em></h2>
-            <p>
-                As an entry-level web developer, I enjoy adding to my knowledge of frameworks and languages. Everyday I 
-                strive to increase that knowledge and refine my skills.
-            </p>
-            <aside>
-                <h3>Core skills</h3>
-                <ul>
-                    <li><span>01</span>HTML</li>
-                    <li><span>04</span>Angular</li>
-                    <li><span>02</span>CSS</li>
-                    <li><span>05</span>GitHub</li>
-                    <li><span>03</span>JavaScript</li>
-                </ul>
-            </aside>
-            <button class="home-button" type="button" data-section-target="home">← Return home</button>
+                <header>About Me</header>
+                <h2>I enjoy doing<br><em>what I do.</em></h2>
+                <p>
+                    As an entry-level web developer, I enjoy adding to my knowledge of frameworks and languages. Everyday I 
+                    strive to increase that knowledge and refine my skills.
+                </p>
+                <aside>
+                    <h3>Core skills</h3>
+                    <ul>
+                        <li><span>01</span>HTML</li>
+                        <li><span>04</span>Angular</li>
+                        <li><span>02</span>CSS</li>
+                        <li><span>05</span>GitHub</li>
+                        <li><span>03</span>JavaScript</li>
+                    </ul>
+                <button class="home-button site-button" type="button" data-target="home"><span class="button-label">← Return home</span></button>
+                </aside>
             </article>
         </section>
         <!-- Projects Section -->
@@ -79,9 +94,9 @@
                     <h2>A few things <em>I’ve built.</em></h2>
                 </div>
                 <nav>
-                    <button type="button" data-project-index="0">01</button>
-                    <button type="button" data-project-index="1">02</button>
-                    <button type="button" data-project-index="2">03</button>
+                    <button class="site-button" type="button" data-project-index="0"><span class="button-label">01</span></button>
+                    <button class="site-button" type="button" data-project-index="1"><span class="button-label">02</span></button>
+                    <button class="site-button" type="button" data-project-index="2"><span class="button-label">03</span></button>
                 </nav>
             </header>
             <article>
@@ -93,20 +108,23 @@
                     <p id="project-description"></p>
                     <ul id="project-tags"></ul>
                     <div class="project-controls">
-                        <a id="project-link" target="_blank">View project ↗</a>
+                        <div class="project-links">
+                            <a id="project-link" target="_blank">Visit the Website ↗</a>
+                            <a id="project-link" target="_blank">Visit the Github page ↗</a>
+                        </div>
                         <div class="arrow-buttons">
-                            <button type="button" id="previous-project">←</button>
-                            <button type="button" id="next-project">→</button>
+                            <button class="site-button" type="button" id="previous-project"><span class="button-label">←</span></button>
+                            <button class="site-button" type="button" id="next-project"><span class="button-label">→</span></button>
                         </div>
                     </div>
+                    <button class="home-button site-button" type="button" data-target="home"><span class="button-label">← Return home</span></button>
                 </aside>
             </article>
-            <button class="home-button" type="button" data-section-target="home">← Return home</button>
         </section>
         <!-- Contact Section -->
         <section id="contact" data-section="contact" hidden>
             <header>Contact Me</header>
-            <h2>Wanna Talk? <em>Please contact me!</em></h2>
+            <h2>Wanna Talk?<br><em>Please contact me!</em></h2>
             <p>
                 Let me demonstrate my skills firsthand. If you have a project or test in mind, email me, 
                 and I’ll work to meet your requirements. If you have any questions, I’d love to chat!
@@ -115,28 +133,27 @@
             <div class="contact-details">
                 <span>Email</span>
                 <a href="mailto:Matthewlandis51@outlook.com">Matthewlandis51@outlook.com</a>
-                <button type="button" id="copy-email">Copy email</button>
             </div>
-            <button class="home-button" type="button" data-section-target="home">← Return home</button>
+            <button class="home-button site-button" type="button" data-target="home"><span class="button-label">← Return home</span></button>
         </section>
     </main>
     <!-- Footer Section -->
     <footer id="footer">
-      <b>2026 Matthew Landis</b>
+      <p>2026 Matthew Landis</p>
       <nav>
-        <a href="https://www.linkedin.com/in/matthew-landis-885a02168/"
+                <a class="site-button" href="https://www.linkedin.com/in/matthew-landis-885a02168/"
            target="_blank"
            title="LinkedIn">
-          <i class="bx bxl-linkedin"></i>
+                    <span class="button-label"><i class="bx bxl-linkedin"></i></span>
         </a>
-        <a href="https://github.com/MatthewLandis"
+                <a class="site-button" href="https://github.com/MatthewLandis"
            target="_blank"
            title="GitHub">
-          <i class="bx bxl-github"></i>
+                    <span class="button-label"><i class="bx bxl-github"></i></span>
         </a>
-        <a href="mailto:Matthewlandis51@outlook.com"
+                <a class="site-button" href="mailto:Matthewlandis51@outlook.com"
            title="Email Matthew Landis">
-          <i class="bx bx-envelope"></i>
+                    <span class="button-label"><i class="bx bx-envelope"></i></span>
         </a>
       </nav>
     </footer>
