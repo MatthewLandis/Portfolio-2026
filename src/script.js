@@ -39,7 +39,7 @@ const projects = [
     description:
       "As a Yu-Gi-Oh! fan, I built my own ad-free card maker with quality-of-life improvements and high-quality assets that make custom cards look real. \n\n Through this project, I learned the basics of Angular, Express, PostgreSQL, and user authentication. Users can easily edit, preview, export, and save their cards for future use.",
     tags: ['Angular Framework', 'HTML/CSS', 'TypeScript'],
-    linkSite: '',
+    linkSite: 'https://cardmaker-frontend-production-47eb.up.railway.app/',
     linkGit: 'https://github.com/MatthewLandis/CardMaker',
     image: 'imgs/YuGiOh.png',
   },
@@ -48,8 +48,8 @@ const projects = [
     description:
       "Notebook is a very small project that I completed in a few days. It's a minimalistic website where users can write and post stories anonymously and read those stories posted by other users at random. \n\n Its simple design allowed me to visualize and understand the importance of Backend development and server architecture.",
     tags: ['Angular Framework', 'Express', 'PostgreSQL'],
-    linkSite: '',
-    linkGit: 'https://notebook-frontend-production-ed12.up.railway.app/',
+    linkSite: 'https://notebook-frontend-production-cc83.up.railway.app/',
+    linkGit: 'https://github.com/MatthewLandis/Notebook-Frontend',
     image: 'imgs/Notebook.jpeg',
   },
   {
@@ -58,7 +58,7 @@ const projects = [
       'My current project—and one I’m excited about—is Expire, an app that lets users scan and save food expiration dates to their profiles. Expire then visualizes which foods are nearing expiration or have already spoiled.',
     tags: ['Angular Framework'],
     linkSite: '',
-    linkGit: '',
+    linkGit: 'https://github.com/MatthewLandis/Expire',
     image: 'imgs/Expire.png',
   }
 ];
