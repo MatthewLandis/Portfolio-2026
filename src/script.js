@@ -55,11 +55,11 @@ const projects = [
   {
     title: 'Expire',
     description:
-      'My current project—and one I’m excited about—is Expire, an app that lets users scan and save food expiration dates to their profiles. Expire then visualizes which foods are nearing expiration or have already spoiled.',
-    tags: ['Angular Framework'],
+      "Expire is a web app I built to keep track of the food in my fridge. Users add their food and its expiration date, and Expire shows what needs eating soon, so less of it ends up in the bin. \n\n Food sits in a drag-and-drop fridge with a freezer at the top, color-coded from green (fresh) to red (expired). Users can mark food as eaten or thrown out, and their profile keeps count. This was my first project with an ASP.NET Core backend.",
+    tags: ['Angular Framework', 'ASP.NET Core', 'PostgreSQL'],
     linkSite: '',
     linkGit: 'https://github.com/MatthewLandis/Expire',
-    image: 'imgs/Expire.png',
+    image: 'imgs/Expire.jpg',
   }
 ];
 
@@ -87,6 +87,8 @@ function renderProject(index) {
   projectElements.title.textContent = project.title;
   projectElements.description.textContent = project.description;
   projectElements.linkSite.href = project.linkSite || project.link;
+  // Hide the website link when a project has no live site yet.
+  projectElements.linkSite.hidden = !project.linkSite;
   projectElements.linkGit.href = project.linkGit || project.link;
   projectElements.linkSite.setAttribute('aria-label', `Visit the ${project.title} website`);
   projectElements.linkGit.setAttribute('aria-label', `View the ${project.title} GitHub page`);
