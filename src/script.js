@@ -57,7 +57,7 @@ const projects = [
     description:
       "Expire is a web app I built to keep track of the food in my fridge. Users add their food and its expiration date, and Expire shows what needs eating soon, so less of it ends up in the bin. \n\n Food sits in a drag-and-drop fridge with a freezer at the top, color-coded from green (fresh) to red (expired). Users can mark food as eaten or thrown out, and their profile keeps count. This was my first project with an ASP.NET Core backend.",
     tags: ['Angular Framework', 'ASP.NET Core', 'PostgreSQL'],
-    linkSite: '',
+    linkSite: 'https://expire-production.up.railway.app/',
     linkGit: 'https://github.com/MatthewLandis/Expire',
     image: 'imgs/Expire.jpg',
   }
