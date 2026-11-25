@@ -608,6 +608,14 @@ main {
   color: var(--cream);
 }
 
+#about aside .home-button {
+  justify-self: start;
+}
+
+#contact .resume-button {
+  margin-top: 0;
+}
+
 /* Projects Styles */
 #projects {
   display: flex;
