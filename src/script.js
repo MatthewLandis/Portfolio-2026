@@ -35,24 +35,6 @@ function showSection(sectionName, trigger) {
 
 const projects = [
   {
-    title: 'YuGiOh Card Maker',
-    description:
-      "As a Yu-Gi-Oh! fan, I built my own ad-free card maker with quality-of-life improvements and high-quality assets that make custom cards look real. \n\n Through this project, I learned the basics of Angular, Express, PostgreSQL, and user authentication. Users can easily edit, preview, export, and save their cards for future use.",
-    tags: ['Angular Framework', 'HTML/CSS', 'TypeScript'],
-    linkSite: 'https://cardmaker-frontend-production-47eb.up.railway.app/',
-    linkGit: 'https://github.com/MatthewLandis/CardMaker',
-    image: 'imgs/YuGiOh.png',
-  },
-  {
-    title: 'Notebook',
-    description:
-      "Notebook is a very small project that I completed in a few days. It's a minimalistic website where users can write and post stories anonymously and read those stories posted by other users at random. \n\n Its simple design allowed me to visualize and understand the importance of Backend development and server architecture.",
-    tags: ['Angular Framework', 'Express', 'PostgreSQL'],
-    linkSite: 'https://notebook-frontend-production-cc83.up.railway.app/',
-    linkGit: 'https://github.com/MatthewLandis/Notebook-Frontend',
-    image: 'imgs/Notebook.jpeg',
-  },
-  {
     title: 'Expire',
     description:
       "Expire is a web app I built to keep track of the food in my fridge. Users add their food and its expiration date, and Expire shows what needs eating soon, so less of it ends up in the bin. \n\n Food sits in a drag-and-drop fridge with a freezer at the top, color-coded from green (fresh) to red (expired). Users can mark food as eaten or thrown out, and their profile keeps count. This was my first project with an ASP.NET Core backend.",
@@ -60,6 +42,24 @@ const projects = [
     linkSite: 'https://expire-production.up.railway.app/',
     linkGit: 'https://github.com/MatthewLandis/Expire',
     image: 'imgs/Expire.jpg',
+  },
+  {
+    title: 'YuGiOh Card Maker',
+    description:
+      "As a Yu-Gi-Oh! fan, I built my own ad-free card maker with quality-of-life improvements and high-quality assets that make custom cards look real. \n\n Through this project, I learned the basics of Angular, Express, PostgreSQL, and user authentication. Users can easily edit, preview, export, and save their cards for future use.",
+    tags: ['Angular Framework', 'HTML/CSS', 'TypeScript'],
+    linkSite: 'https://cardmaker-frontend-production-47eb.up.railway.app/',
+    linkGit: 'https://github.com/MatthewLandis/CardMaker',
+    image: 'imgs/YuGiOh.webp',
+  },
+  {
+    title: 'Notebook',
+    description:
+      "Notebook is a minimalist website where users can write and post stories anonymously, and read stories posted by other users at random. \n\n Its simple design let me focus on the backend: building the Express server, storing stories in PostgreSQL, and seeing how the server and frontend fit together.",
+    tags: ['Angular Framework', 'Express', 'PostgreSQL'],
+    linkSite: 'https://notebook-frontend-production-cc83.up.railway.app/',
+    linkGit: 'https://github.com/MatthewLandis/Notebook-Frontend',
+    image: 'imgs/Notebook.jpeg',
   }
 ];
 
