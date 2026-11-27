@@ -1,4 +1,4 @@
-# Matthew Landis — Portfolio
+# Matthew Landis - Portfolio
 
 My personal portfolio site, where I show the web apps I've built, a bit about me, and how to get in touch.
 
